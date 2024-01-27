@@ -9,9 +9,6 @@ pipeline {
             steps {
                 echo "Belajar Pipeline"
             }
-            steps {
-                echo "hyyyy"
-            }
         }
     }
     post {
