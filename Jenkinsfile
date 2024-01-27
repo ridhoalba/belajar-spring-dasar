@@ -9,6 +9,12 @@ pipeline {
             steps {
                 echo "Belajar Pipeline"
             }
+            steps {
+                ./mvnw compile
+            }
+            steps {
+                ./mvnw test
+            }
         }
     }
     post {
