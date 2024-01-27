@@ -10,6 +10,21 @@ pipeline {
                 echo "Belajar Pipeline"
             }
         }
+        stage('clean'){
+            steps{
+                ./mvnw clean
+            }
+        }
+        stage('compiling'){
+            steps{
+                ./mvnw compile test-compile
+            }
+        }
+        stage('test'){
+            steps{
+                ./mvnw test
+            }
+        }
     }
     post {
         always {
