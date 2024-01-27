@@ -10,6 +10,19 @@ pipeline {
                 echo "Belajar Pipeline"
             }
         }
+        stage('Build'){
+            steps {
+                echo"build"
+            }
+        }
+        stage('Test'){
+            steps{
+                echo "Test"
+            }
+        }
+        steps('Deploy'){
+            echo "deploy"
+        }
     }
     post {
         always {
