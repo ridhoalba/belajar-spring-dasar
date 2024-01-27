@@ -10,7 +10,10 @@ pipeline {
                 echo "Belajar Pipeline"
             }
             steps {
-                ./mvnw compile
+                ./mvnw clean
+            }
+            steps {
+                ./mvnw compile test-compile
             }
             steps {
                 ./mvnw test
