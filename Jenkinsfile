@@ -10,19 +10,19 @@ pipeline {
                 echo "Belajar Pipeline"
             }
         }
-        stage('Build'){
+        stage('Clean'){
             steps {
-                echo"build"
+                sh './mvnw clean'
+            }
+        }
+        stage('Compiling'){
+            steps{
+                sh './mvnw compile test-compile'
             }
         }
         stage('Test'){
             steps{
-                echo "Test"
-            }
-        }
-        stage('Deploy'){
-            steps{
-                echo "deploy"
+                sh './mvnw test'
             }
         }
     }
