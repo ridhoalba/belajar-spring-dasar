@@ -9,6 +9,7 @@ pipeline {
             steps {
                 echo "Belajar Pipeline"
             }
+        }
     }
     post {
         always {
